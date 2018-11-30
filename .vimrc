@@ -23,6 +23,10 @@ set cindent
 "按照C/C++风格自动缩进
 syntax on
 
+"开启折叠
+set fdm=marker
+
+
 colorscheme molokai
 
 
@@ -123,4 +127,3 @@ source ~/.vim/vimrcs/echodoc.vim
 source ~/.vim/vimrcs/ack.vim
 
 
-command Todo Ack! 'TODO|FIXME|CHANGED|BUG|HACK'
