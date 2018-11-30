@@ -1,0 +1,2 @@
+let Tlist_Use_Right_Window=1
+let Tlist_File_Fold_Auto_Close=1
