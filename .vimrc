@@ -73,6 +73,14 @@ func! Run()
 	exec "! ./%<"
 endfunc
 
+command Debug call Debug()
+
+func! Debug()
+	exec "packadd termdebug"
+	exec "!g++ -g % -o%<_debug"
+	exec "Termdebug %<_debug"
+endfunc
+
 
 "设置vim中make命令
 if filereadable("makefile")
