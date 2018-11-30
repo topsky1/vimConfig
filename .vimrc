@@ -33,6 +33,10 @@ colorscheme molokai
 "====================VIM运行设置====================
 nnoremap gp `[v`]
 
+"加载当前工作目录下的vimrc文件
+if filereadable("workspace.vim")
+	source workspace.vim
+endif
 
 "=====================编译运行======================================
 "
@@ -76,6 +80,7 @@ endfunc
 command Debug call Debug()
 
 func! Debug()
+	exec "w"
 	exec "packadd termdebug"
 	exec "!g++ -g % -o%<_debug"
 	exec "Termdebug %<_debug"
@@ -103,10 +108,6 @@ endfunc
 "========================编译运行end=====================================
 
 
-"加载当前工作目录下的vimrc文件
-if filereadable("workspace.vim")
-	source workspace.vim
-endif
 
 
 
