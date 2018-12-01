@@ -17,6 +17,8 @@ set incsearch
 
 "高亮当前行
 set cursorline
+"高亮当前列
+set cursorcolumn
 
 "windows 下自动缩进
 set cindent
