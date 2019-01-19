@@ -84,6 +84,7 @@ command Debug call Debug()
 func! Debug()
 	exec "w"
 	exec "packadd termdebug"
+	exec "let g:termdebug_wide = 163"
 	exec "!g++ -g % -o%<_debug"
 	exec "Termdebug %<_debug"
 endfunc
@@ -103,9 +104,6 @@ func! CopyToWindows()
 	exec "w"
 	exec "!cat % |/mnt/c/Windows/System32/clip.exe"
 endfunc
-
-
-
 
 "========================编译运行end=====================================
 
@@ -136,5 +134,3 @@ source ~/.vim/vimrcs/YCM.vim
 source ~/.vim/vimrcs/ultisnips.vim
 source ~/.vim/vimrcs/echodoc.vim
 source ~/.vim/vimrcs/ack.vim
-
-
